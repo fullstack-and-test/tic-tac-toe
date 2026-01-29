@@ -25,16 +25,16 @@ Setup foundational project structure and tools.
 
 ### Setup Tasks
 
-- [ ] T001 Create Next.js project with TypeScript configuration in project root
-- [ ] T002 [P] Configure ESLint and Prettier for code quality in `.eslintrc.json` and `.prettierrc`
-- [ ] T003 [P] Set up Jest + React Testing Library in `jest.config.js` and `__tests__/setup.ts`
-- [ ] T004 [P] Create project directory structure: `app/`, `components/`, `hooks/`, `styles/`, `__tests__/`
-- [ ] T005 Create `app/layout.tsx` with root HTML structure and meta tags (responsive viewport)
-- [ ] T006 [P] Create `.gitignore` entries for node_modules, build artifacts, and environment files
-- [ ] T007 [P] Update `package.json` with build, dev, test, export scripts
-- [ ] T008 Create `tsconfig.json` with strict mode enabled for type safety
+- [x] T001 Create Next.js project with TypeScript configuration in project root
+- [x] T002 [P] Configure ESLint and Prettier for code quality in `.eslintrc.json` and `.prettierrc`
+- [x] T003 [P] Set up Jest + React Testing Library in `jest.config.js` and `__tests__/setup.ts`
+- [x] T004 [P] Create project directory structure: `app/`, `components/`, `hooks/`, `styles/`, `__tests__/`
+- [x] T005 Create `app/layout.tsx` with root HTML structure and meta tags (responsive viewport)
+- [x] T006 [P] Create `.gitignore` entries for node_modules, build artifacts, and environment files
+- [x] T007 [P] Update `package.json` with build, dev, test, export scripts
+- [x] T008 Create `tsconfig.json` with strict mode enabled for type safety
 
-**Status**: Phase 1 complete → Proceed to Phase 2
+**Status**: ✅ Phase 1 complete → Proceed to Phase 2
 
 ---
 
@@ -105,9 +105,11 @@ Implement core gameplay UI with visual feedback. **This is the MVP core.**
 ### US1: Styling & Responsive
 
 - [ ] T043 [P] [US1] Create `styles/responsive.module.css` with media queries (mobile 320px, tablet 768px, desktop 1025px)
-- [ ] T044 [P] [US1] Test responsive layout on mobile (320-480px), tablet (768-1024px), desktop (1920px+)
+- [ ] T044 [P] [US1] **Initial responsive check** during Phase 3 development: verify layout on mobile (320-480px), tablet (768-1024px), desktop (1920px+) using browser dev tools
 - [ ] T045 [P] [US1] Implement touch-friendly sizing: minimum 44x44px for all interactive elements
 - [ ] T046 [P] [US1] Create global styles in `app/globals.css` (font stack, colors, spacing)
+
+**Note**: T044-T045 are development-phase checks. Phase 7 (T103+) includes comprehensive device/browser testing in dedicated QA phase.
 
 ### US1: Color Palette
 
@@ -134,7 +136,7 @@ Implement game reset functionality and end-of-game UI.
 - [ ] T055 [P] [US2] Update GameStatus to display "O Wins!" when status = 'o-wins'
 - [ ] T056 [P] [US2] Update GameStatus to display "Draw!" when status = 'draw'
 - [ ] T057 [P] [US2] Style win/draw messages with appropriate visual emphasis (size, color, animation)
-- [ ] T058 [P] [US2] Add confetti or celebration animation on win (optional, CSS-based)
+- [ ] T058 [P] [US2] **[OPTIONAL]** Add confetti or celebration animation on win (CSS-based, ~50 lines). Skippable if timeline tight. If implemented, use lightweight CSS @keyframes approach (no external libraries).
 
 ### US2: Reset Button & Interaction
 
@@ -177,29 +179,29 @@ Ensure visual design meets pixel-art + modern sleek requirements.
 ### US3: Pixel-Art Visual Elements
 
 - [ ] T076 [P] [US3] Implement pixelated grid lines (CSS borders, crisp 2px edges)
-- [ ] T076a [P] [US3] Implement pixelated symbols (X and O with sharp edges, 3px or bitmap font)
-- [ ] T077 [P] [US3] Add pixel-art inspired button styling (sharp corners, no gradients)
-- [ ] T078 [P] [US3] Verify image-rendering: pixelated; is applied to grid and symbols
+- [ ] T077 [P] [US3] Implement pixelated symbols (X and O with sharp edges, 3px or bitmap font)
+- [ ] T078 [P] [US3] Add pixel-art inspired button styling (sharp corners, no gradients)
+- [ ] T079 [P] [US3] Verify image-rendering: pixelated; is applied to grid and symbols
 
 ### US3: Modern Sleek Aesthetic
 
-- [ ] T079 [P] [US3] Implement ample spacing around board (padding, margins)
-- [ ] T080 [P] [US3] Ensure clean layout: centered board, clear hierarchy, minimal clutter
-- [ ] T081 [P] [US3] Add subtle shadows or borders for depth (if fits aesthetic)
-- [ ] T082 [P] [US3] Test: overall visual appearance is "retro-modern" (pixel-art + clean design)
+- [ ] T080 [P] [US3] Implement ample spacing around board (padding, margins)
+- [ ] T081 [P] [US3] Ensure clean layout: centered board, clear hierarchy, minimal clutter
+- [ ] T082 [P] [US3] Add subtle shadows or borders for depth (if fits aesthetic)
+- [ ] T083 [P] [US3] Test: overall visual appearance is "retro-modern" (pixel-art + clean design)
 
 ### US3: Typography
 
-- [ ] T083 [P] [US3] Use system font stack for body text (crisp, modern, fast loading)
-- [ ] T084 [P] [US3] Optionally add "Press Start 2P" or similar pixel font for title only (not overused)
-- [ ] T085 [P] [US3] Verify font sizes are responsive with clamp() (scale across viewports)
-- [ ] T086 [P] [US3] Ensure text is readable at all viewport sizes (minimum 14px on mobile)
+- [ ] T084 [P] [US3] Use system font stack for body text (crisp, modern, fast loading)
+- [ ] T085 [P] [US3] **[OPTIONAL]** Add "Press Start 2P" or similar pixel font for title only (not overused). Alternative: use system font for all text.
+- [ ] T086 [P] [US3] Verify font sizes are responsive with clamp() (scale across viewports)
+- [ ] T087 [P] [US3] Ensure text is readable at all viewport sizes (minimum 14px on mobile)
 
 ### US3: Visual Tests
 
-- [ ] T087 Take screenshots on mobile (375px), tablet (768px), desktop (1920px)
-- [ ] T088 Verify pixel-art aesthetic is consistent across all devices
-- [ ] T089 Compare against design brief: pixel-art + modern sleek ✓
+- [ ] T088 Take screenshots on mobile (375px), tablet (768px), desktop (1920px)
+- [ ] T089 Verify pixel-art aesthetic is consistent across all devices
+- [ ] T090 Compare against design brief: pixel-art + modern sleek ✓
 
 ---
 
@@ -209,66 +211,66 @@ Enhance experience with smooth transitions and animations.
 
 ### US4: Move Animations
 
-- [ ] T090 [P] [US4] Animate symbol appearance on move (popIn: scale 0.5→1 + fade 0→1, 250ms)
-- [ ] T091 [P] [US4] Ensure animation doesn't block interaction (use CSS, not JS)
-- [ ] T092 [P] [US4] Test: rapid clicks during animation → second move queued after animation
+- [ ] T091 [P] [US4] Animate symbol appearance on move (popIn: scale 0.5→1 + fade 0→1, 250ms)
+- [ ] T092 [P] [US4] Ensure animation doesn't block interaction (use CSS, not JS)
+- [ ] T093 [P] [US4] Test: rapid clicks during animation → second move queued after animation
 
 ### US4: Turn Switch Animation
 
-- [ ] T093 [P] [US4] Add transition to GameStatus when turn switches (fade or slide, 200ms)
-- [ ] T094 [P] [US4] Subtle highlight on current player indicator
+- [ ] T094 [P] [US4] Add transition to GameStatus when turn switches (fade or slide, 200ms)
+- [ ] T095 [P] [US4] Subtle highlight on current player indicator
 
 ### US4: Reset Animation
 
-- [ ] T095 [P] [US4] Animate board clear on reset (cells fade out in sequence, ~300ms total)
-- [ ] T096 [P] [US4] Animate board init on reset (cells fade in, 200ms)
+- [ ] T096 [P] [US4] Implement board clear animation on reset (fade out cells, 300ms)
+- [ ] T097 [P] [US4] After reset: new board animates in (fade in, scale)
 
 ### US4: Win/Draw Announcement
 
-- [ ] T097 [P] [US4] Animate winner message appearance (scale up, fade in, 400ms)
-- [ ] T098 [P] [US4] Optional: highlight winning cells (slight glow or color change)
+- [ ] T098 [P] [US4] Animate winner message appearance (scale up, fade in, 400ms)
+- [ ] T099 [P] [US4] **[OPTIONAL]** Highlight winning cells (slight glow or color change)
 
 ### US4: Animation Performance
 
-- [ ] T099 Test: 60fps animation on mobile, tablet, desktop
-- [ ] T100 Test: no jank or stutter during gameplay
-- [ ] T101 Profile: ensure animations don't cause layout thrashing
+- [ ] T100 Test: 60fps animation on mobile, tablet, desktop
+- [ ] T101 Test: no jank or stutter during gameplay
+- [ ] T102 Profile: ensure animations don't cause layout thrashing
 
 ---
 
 ## Phase 7: User Story 5 - Responsive Design (P2)
 
-Ensure game works perfectly on all device sizes.
+Ensure game works perfectly on all device sizes. **Comprehensive QA phase testing** (distinct from Phase 3 development-time checks T044-T045).
 
 ### US5: Mobile (320-480px)
 
-- [ ] T102 [P] [US5] Test on actual mobile devices or emulator (iOS Safari, Chrome Mobile)
-- [ ] T103 [P] [US5] Verify board scales to fit screen with padding
-- [ ] T104 [P] [US5] Verify cells are at least 44x44px and clickable
-- [ ] T105 [P] [US5] Verify text is readable (no font sizes < 14px)
-- [ ] T106 [P] [US5] Test touch interactions: tap cells, tap reset button
-- [ ] T107 [P] [US5] Verify no horizontal scroll (full width responsive)
+- [ ] T103 [P] [US5] Test on actual mobile devices or emulator (iOS Safari, Chrome Mobile)
+- [ ] T104 [P] [US5] Verify board scales to fit screen with padding
+- [ ] T105 [P] [US5] Verify cells are at least 44x44px and clickable
+- [ ] T106 [P] [US5] Verify text is readable (no font sizes < 14px)
+- [ ] T107 [P] [US5] Test touch interactions: tap cells, tap reset button
+- [ ] T108 [P] [US5] Verify no horizontal scroll (full width responsive)
 
 ### US5: Tablet (768-1024px)
 
-- [ ] T108 [P] [US5] Test on tablet-sized viewport (iPad, Android tablet)
-- [ ] T109 [P] [US5] Verify board is centered with appropriate spacing
-- [ ] T110 [P] [US5] Verify landscape orientation works
-- [ ] T111 [P] [US5] Test touch interactions on tablet
+- [ ] T109 [P] [US5] Test on tablet-sized viewport (iPad, Android tablet)
+- [ ] T110 [P] [US5] Verify board is centered with appropriate spacing
+- [ ] T111 [P] [US5] Verify landscape orientation works
+- [ ] T112 [P] [US5] Test touch interactions on tablet
 
 ### US5: Desktop (1920px+)
 
-- [ ] T112 [P] [US5] Test on desktop browsers (Chrome, Firefox, Safari)
-- [ ] T113 [P] [US5] Verify content doesn't stretch excessively (max-width or centered)
-- [ ] T114 [P] [US5] Test mouse interactions and hover states
-- [ ] T115 [P] [US5] Test on ultra-wide screens (2560px+)
+- [ ] T113 [P] [US5] Test on desktop browsers (Chrome, Firefox, Safari)
+- [ ] T114 [P] [US5] Verify content doesn't stretch excessively (max-width or centered)
+- [ ] T115 [P] [US5] Test mouse interactions and hover states
+- [ ] T116 [P] [US5] Test on ultra-wide screens (2560px+)
 
 ### US5: Cross-Browser Testing
 
-- [ ] T116 [P] [US5] Test on Chrome (latest 2 versions)
-- [ ] T117 [P] [US5] Test on Firefox (latest 2 versions)
-- [ ] T118 [P] [US5] Test on Safari (latest 2 versions)
-- [ ] T119 [P] [US5] Test on Edge (latest 2 versions)
+- [ ] T117 [P] [US5] Test on Chrome (latest 2 versions)
+- [ ] T118 [P] [US5] Test on Firefox (latest 2 versions)
+- [ ] T119 [P] [US5] Test on Safari (latest 2 versions)
+- [ ] T120 [P] [US5] Test on Edge (latest 2 versions)
 
 ---
 
@@ -278,27 +280,27 @@ Clarify game state with prominent UI messages.
 
 ### US6: Turn Indicator
 
-- [ ] T120 [P] [US6] Display "X's Turn" / "O's Turn" at top or above board
-- [ ] T121 [P] [US6] Update indicator immediately after each move
-- [ ] T122 [P] [US6] Style with large, bold font (responsive sizing)
-- [ ] T123 [P] [US6] Add visual distinction between X and O (colors or symbols)
+- [ ] T121 [P] [US6] Display "X's Turn" / "O's Turn" at top or above board
+- [ ] T122 [P] [US6] Update indicator immediately after each move
+- [ ] T123 [P] [US6] Style with large, bold font (responsive sizing)
+- [ ] T124 [P] [US6] Add visual distinction between X and O (colors or symbols)
 
 ### US6: Game Over Messages
 
-- [ ] T124 [P] [US6] Display "X Wins!" / "O Wins!" with prominent styling
-- [ ] T125 [P] [US6] Display "Draw!" with neutral styling (different color from win)
-- [ ] T126 [P] [US6] Hide turn indicator when game is over
-- [ ] T127 [P] [US6] Show "Play Again" button text on reset when game ended
+- [ ] T125 [P] [US6] Display "X Wins!" / "O Wins!" with prominent styling
+- [ ] T126 [P] [US6] Display "Draw!" with neutral styling (different color from win)
+- [ ] T127 [P] [US6] Hide turn indicator when game is over
+- [ ] T128 [P] [US6] Show "Play Again" button text on reset when game ended
 
 ### US6: Move Counter (Optional)
 
-- [ ] T128 [P] [US6] Optionally display move count (1-9) for reference
-- [ ] T129 [P] [US6] Style as secondary info (smaller font, subtle color)
+- [ ] T129 [P] [US6] **[OPTIONAL]** Display move count (1-9) for reference
+- [ ] T130 [P] [US6] **[OPTIONAL]** Style as secondary info (smaller font, subtle color)
 
 ### US6: Accessibility
 
-- [ ] T130 [US6] Add ARIA labels to interactive elements (button roles, game status announcements)
-- [ ] T131 [US6] Verify color is not the only indicator of information (use text labels too)
+- [ ] T131 [US6] Add ARIA labels to interactive elements (button roles, game status announcements)
+- [ ] T132 [US6] Verify color is not the only indicator of information (use text labels too)
 
 ---
 
@@ -308,33 +310,34 @@ Comprehensive testing before deployment.
 
 ### Unit Tests
 
-- [ ] T132 Run all useGameState tests and verify 100% pass
-- [ ] T133 Run all component tests and verify 100% pass
-- [ ] T134 Check code coverage: target 80%+ for game logic, 60%+ for components
+- [ ] T133 Run all useGameState tests and verify 100% pass
+- [ ] T134 Run all component tests and verify 100% pass
+- [ ] T135 Check code coverage: target 80%+ for game logic, 60%+ for components
 
 ### Integration Tests
 
-- [ ] T135 [P] Write integration test: full game flow (9 moves to win)
-- [ ] T136 [P] Write integration test: draw scenario (9 moves, no winner)
-- [ ] T137 [P] Write integration test: reset and replay
-- [ ] T138 [P] Write integration test: localStorage persistence and restore
+- [ ] T136 [P] Write integration test: full game flow (9 moves to win)
+- [ ] T137 [P] Write integration test: draw scenario (9 moves, no winner)
+- [ ] T138 [P] Write integration test: reset and replay
+- [ ] T139 [P] Write integration test: localStorage persistence and restore
 
 ### E2E / Manual Tests
 
-- [ ] T139 Test complete game on desktop: start → move → win → reset → new game
-- [ ] T140 Test complete game on mobile: same flow via touch
-- [ ] T141 Test offline: close DevTools, play game, refresh → state restored
-- [ ] T142 Test browser compatibility: try on Chrome, Firefox, Safari, Edge
-- [ ] T143 Test rapid clicks: spam cell clicks → only one move per cell
-- [ ] T144 Test edge cases: try clicking occupied cells → no change
-- [ ] T145 Test animations: verify pop-in, fade, and transitions are smooth
+- [ ] T140 Test complete game on desktop: start → move → win → reset → new game
+- [ ] T141 Test complete game on mobile: same flow via touch
+- [ ] T142 Test offline: close DevTools, play game, refresh → state restored
+- [ ] T143 **[NEW - Edge Case]** Test browser navigation: use back/forward buttons during gameplay → verify game state restored (not lost)
+- [ ] T144 Test browser compatibility: try on Chrome, Firefox, Safari, Edge
+- [ ] T145 Test rapid clicks: spam cell clicks → only one move per cell
+- [ ] T146 Test edge cases: try clicking occupied cells → no change
+- [ ] T147 Test animations: verify pop-in, fade, and transitions are smooth
 
 ### Performance Tests
 
-- [ ] T146 Measure page load time (target <2s on 4G)
-- [ ] T147 Measure interaction response time (target 100ms)
-- [ ] Test animation frame rate (target 60fps)
-- [ ] Test bundle size (target <300KB uncompressed, <100KB gzipped)
+- [ ] T148 Measure page load time (target <2s on 4G)
+- [ ] T149 Measure interaction response time (target 100ms)
+- [ ] T150 Test animation frame rate (target 60fps)
+- [ ] T151 Test bundle size (target <300KB uncompressed, <100KB gzipped)
 
 ---
 
@@ -344,23 +347,31 @@ Prepare for production release.
 
 ### Build & Export
 
-- [ ] T148 Run `npm run build` and verify success
-- [ ] T149 Run `npm run export` (next export) and verify `out/` directory is generated
-- [ ] T150 Verify build artifacts: `out/index.html`, `out/_next/static/`, etc.
-- [ ] T151 Test static export: open `out/index.html` in browser locally
+- [ ] T152 Run `npm run build` and verify success
+- [ ] T153 Run `npm run export` (next export) and verify `out/` directory is generated
+- [ ] T154 Verify build artifacts: `out/index.html`, `out/_next/static/`, etc.
+- [ ] T155 Test static export: open `out/index.html` in browser locally
 
-### Deployment
+### Deployment Platform Decision
 
-- [ ] T152 Choose deployment platform (Vercel, GitHub Pages, Netlify, or custom)
-- [ ] T153 Deploy static export to chosen platform
-- [ ] T154 Verify live URL: gameplay works on deployed site
-- [ ] T155 Test on deployed site: full game flow, offline behavior, responsiveness
+- [ ] T156 **[DECISION TASK]** Evaluate and choose deployment platform:
+  - [ ] Vercel (recommended - native Next.js, free tier generous, automatic deployments)
+  - [ ] GitHub Pages (free, simple, no serverless features needed)
+  - [ ] Netlify (flexible, good DX, good free tier)
+  - [ ] Custom hosting (full control, more maintenance)
+  - Document decision rationale in README or deployment notes
+
+### Deployment Execution
+
+- [ ] T157 Deploy static export to chosen platform
+- [ ] T158 Verify live URL: gameplay works on deployed site
+- [ ] T159 Test on deployed site: full game flow, offline behavior, responsiveness
 
 ### Documentation
 
-- [ ] T156 Create README.md with setup instructions and deployment guide
-- [ ] T157 Document known issues and limitations
-- [ ] T158 Create CHANGELOG.md with version history
+- [ ] T160 Create README.md with setup instructions and deployment guide
+- [ ] T161 Document known issues and limitations
+- [ ] T162 Create CHANGELOG.md with version history
 
 ---
 
@@ -370,35 +381,35 @@ Final enhancements and monitoring.
 
 ### Bug Fixes & Refinements
 
-- [ ] T159 [P] Address any user-reported issues or test failures
-- [ ] T160 [P] Optimize animations based on performance testing
-- [ ] T161 [P] Refine styling based on visual feedback
-- [ ] T162 Add optional features from Phase 2 (move history, undo, etc.)
+- [ ] T163 [P] Address any user-reported issues or test failures
+- [ ] T164 [P] Optimize animations based on performance testing
+- [ ] T165 [P] Refine styling based on visual feedback
+- [ ] T166 **[OPTIONAL]** Add optional features (move history, undo, game timer, leaderboard, etc.)
 
 ### Monitoring & Analytics (Optional)
 
-- [ ] T163 Add page load monitoring (optional)
-- [ ] T164 Monitor gameplay metrics (games played, average duration)
+- [ ] T167 **[OPTIONAL]** Add page load monitoring via analytics service
+- [ ] T168 **[OPTIONAL]** Monitor gameplay metrics (games played, average duration, bounce rate)
 
 ---
 
 ## Task Summary
 
-| Phase | Focus | Task Count | Key Deliverable |
-|-------|-------|-----------|-----------------|
-| 1 | Setup | 8 | Next.js project ready |
-| 2 | Game Logic | 16 | useGameState hook + tests |
-| 3 | US1: Core Gameplay | 29 | Board + cells + moves |
-| 4 | US2: Reset Game | 18 | Reset button + end state |
-| 5 | US3: Pixel-Art Aesthetic | 15 | Visual design complete |
-| 6 | US4: Smooth Animations | 12 | Polished animations |
-| 7 | US5: Responsive Design | 18 | All viewports working |
-| 8 | US6: Status Display | 12 | Clear game state indicators |
-| 9 | Testing & QA | 17 | 100% test pass, verified |
-| 10 | Build & Deploy | 8 | Live on production |
-| 11 | Polish | 6 | User feedback addressed |
+| Phase | Focus                    | Task Count | Key Deliverable             |
+| ----- | ------------------------ | ---------- | --------------------------- |
+| 1     | Setup                    | 8          | Next.js project ready       |
+| 2     | Game Logic               | 16         | useGameState hook + tests   |
+| 3     | US1: Core Gameplay       | 29         | Board + cells + moves       |
+| 4     | US2: Reset Game          | 18         | Reset button + end state    |
+| 5     | US3: Pixel-Art Aesthetic | 17         | Visual design complete      |
+| 6     | US4: Smooth Animations   | 12         | Polished animations         |
+| 7     | US5: Responsive Design   | 18         | All viewports working       |
+| 8     | US6: Status Display      | 12         | Clear game state indicators |
+| 9     | Testing & QA             | 19         | 100% test pass, browser nav |
+| 10    | Build & Deploy           | 11         | Live on production          |
+| 11    | Polish                   | 6          | User feedback addressed     |
 
-**Total: 164 tasks**
+**Total: 168 tasks** (updated: +2 optional task clarifications, +1 browser nav edge case test, +1 improved deployment decision task)
 
 ---
 
@@ -431,19 +442,24 @@ Final enhancements and monitoring.
 Tasks marked [P] can be developed in parallel:
 
 **Parallel Set 1** (Setup):
+
 - T002, T003, T004, T006, T007 (all configuration and structure)
 
 **Parallel Set 2** (Game Logic):
+
 - T009, T010, T011, T012, T013, T014, T015, T016, T017, T018 (all within useGameState hook)
 
 **Parallel Set 3** (US1 UI - Round 1):
+
 - T025, T026, T027, T028, T029, T030 (Cell, GameBoard, base styles)
 
 **Parallel Set 4** (US1 UI - Round 2):
+
 - T031, T032, T033, T034, T035 (symbols and animations)
 - T036, T037, T038 (GameStatus component)
 
 **Parallel Set 5** (US2-US6 Components):
+
 - T054-T086 (all component enhancements for P2 features)
 
 ---
@@ -451,9 +467,11 @@ Tasks marked [P] can be developed in parallel:
 ## Dependencies
 
 **Critical Path**:
+
 1. Phase 1 (Setup) → Phase 2 (Game Logic) → Phase 3 (US1) → Phase 4-8 can be parallel
 
 **Key Dependencies**:
+
 - All game logic (Phase 2) must be complete before UI components (Phase 3+)
 - Component tests can be written in parallel with components
 - Styling can be developed in parallel with components
@@ -463,6 +481,7 @@ Tasks marked [P] can be developed in parallel:
 ---
 
 **Next Steps**:
+
 1. Review task list with team
 2. Estimate effort for each task (story points or hours)
 3. Assign tasks and create sprint plan
