@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Pixel-Art Tic-Tac-Toe',
@@ -20,7 +21,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#0a0e27" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
