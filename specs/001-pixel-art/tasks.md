@@ -349,20 +349,49 @@ Comprehensive testing before deployment.
 
 ---
 
-## Phase 10: Build & Deployment
+## Phase 10: CI/CD & Automated Testing
+
+Implement continuous integration and automated quality checks.
+
+### GitHub Actions Setup
+
+- [x] T152 Create `.github/workflows/ci.yml` with GitHub Actions CI pipeline
+- [x] T153 Configure workflow triggers: push to `main` and `feature/**`, pull requests to `main`
+- [x] T154 [P] Add linting check step: `npm run lint` (ESLint validation)
+- [x] T155 [P] Add static analysis step: `npx tsc --noEmit` (TypeScript type checking)
+- [x] T156 [P] Add unit test step: `npm test -- --coverage` with coverage reporting
+- [x] T157 [P] Add integration test step: run full test suite with artifact upload
+- [x] T158 Configure Node version: test on Node 20.x (latest LTS)
+
+### Artifact Management
+
+- [x] T159 Configure test result artifacts: upload coverage reports (retention 30 days)
+- [x] T160 Configure test output artifacts: upload test results and logs (retention 30 days)
+- [ ] T161 [P] Add branch restriction: require CI to pass before merge to `main`
+
+### Documentation
+
+- [ ] T162 Document CI/CD pipeline in README.md or CONTRIBUTING.md
+- [ ] T163 Add badge to README.md showing CI status
+
+**Status**: ✅ Phase 10 CI/CD setup complete → Ready for production builds
+
+---
+
+## Phase 11: Build & Deployment
 
 Prepare for production release.
 
 ### Build & Export
 
-- [ ] T152 Run `npm run build` and verify success
-- [ ] T153 Run `npm run export` (next export) and verify `out/` directory is generated
-- [ ] T154 Verify build artifacts: `out/index.html`, `out/_next/static/`, etc.
-- [ ] T155 Test static export: open `out/index.html` in browser locally
+- [ ] T164 Run `npm run build` and verify success
+- [ ] T165 Run `npm run export` (next export) and verify `out/` directory is generated
+- [ ] T166 Verify build artifacts: `out/index.html`, `out/_next/static/`, etc.
+- [ ] T167 Test static export: open `out/index.html` in browser locally
 
 ### Deployment Platform Decision
 
-- [ ] T156 **[DECISION TASK]** Evaluate and choose deployment platform:
+- [ ] T168 **[DECISION TASK]** Evaluate and choose deployment platform:
   - [ ] Vercel (recommended - native Next.js, free tier generous, automatic deployments)
   - [ ] GitHub Pages (free, simple, no serverless features needed)
   - [ ] Netlify (flexible, good DX, good free tier)
@@ -371,33 +400,33 @@ Prepare for production release.
 
 ### Deployment Execution
 
-- [ ] T157 Deploy static export to chosen platform
-- [ ] T158 Verify live URL: gameplay works on deployed site
-- [ ] T159 Test on deployed site: full game flow, offline behavior, responsiveness
+- [ ] T169 Deploy static export to chosen platform
+- [ ] T170 Verify live URL: gameplay works on deployed site
+- [ ] T171 Test on deployed site: full game flow, offline behavior, responsiveness
 
 ### Documentation
 
-- [ ] T160 Create README.md with setup instructions and deployment guide
-- [ ] T161 Document known issues and limitations
-- [ ] T162 Create CHANGELOG.md with version history
+- [ ] T172 Create README.md with setup instructions and deployment guide
+- [ ] T173 Document known issues and limitations
+- [ ] T174 Create CHANGELOG.md with version history
 
 ---
 
-## Phase 11: Polish & Post-Launch
+## Phase 12: Polish & Post-Launch
 
 Final enhancements and monitoring.
 
 ### Bug Fixes & Refinements
 
-- [ ] T163 [P] Address any user-reported issues or test failures
-- [ ] T164 [P] Optimize animations based on performance testing
-- [ ] T165 [P] Refine styling based on visual feedback
-- [ ] T166 **[OPTIONAL]** Add optional features (move history, undo, game timer, leaderboard, etc.)
+- [ ] T175 [P] Address any user-reported issues or test failures
+- [ ] T176 [P] Optimize animations based on performance testing
+- [ ] T177 [P] Refine styling based on visual feedback
+- [ ] T178 **[OPTIONAL]** Add optional features (move history, undo, game timer, leaderboard, etc.)
 
 ### Monitoring & Analytics (Optional)
 
-- [ ] T167 **[OPTIONAL]** Add page load monitoring via analytics service
-- [ ] T168 **[OPTIONAL]** Monitor gameplay metrics (games played, average duration, bounce rate)
+- [ ] T179 **[OPTIONAL]** Add page load monitoring via analytics service
+- [ ] T180 **[OPTIONAL]** Monitor gameplay metrics (games played, average duration, bounce rate)
 
 ---
 
@@ -414,10 +443,11 @@ Final enhancements and monitoring.
 | 7     | US5: Responsive Design   | 18         | All viewports working       |
 | 8     | US6: Status Display      | 12         | Clear game state indicators |
 | 9     | Testing & QA             | 19         | 100% test pass, browser nav |
-| 10    | Build & Deploy           | 11         | Live on production          |
-| 11    | Polish                   | 6          | User feedback addressed     |
+| 10    | CI/CD & Automation       | 12         | Automated quality checks    |
+| 11    | Build & Deploy           | 11         | Live on production          |
+| 12    | Polish                   | 6          | User feedback addressed     |
 
-**Total: 168 tasks** (updated: +2 optional task clarifications, +1 browser nav edge case test, +1 improved deployment decision task)
+**Total: 180 tasks**
 
 ---
 
