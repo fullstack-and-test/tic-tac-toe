@@ -5,7 +5,6 @@ import { useGameState } from "@/hooks/useGameState";
 import { GameBoard } from "@/components/GameBoard";
 import { GameStatus } from "@/components/GameStatus";
 import { ResetButton } from "@/components/ResetButton";
-import styles from "@/styles/board.module.css";
 import animationStyles from "@/styles/animations.module.css";
 
 /**
