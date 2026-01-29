@@ -1,50 +1,84 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Tic-Tac-Toe Constitution
+
+A static web application for playing tic-tac-toe in the browser.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Static, Offline-Capable Deployment
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+The app is delivered as a static, self-contained web application with no backend services or external API dependencies. Built with modern web frameworks (Next.js 14+) that support static export, resulting in standard HTML/CSS/JS artifacts deployable to any static host. No network requests required beyond initial page load. All state persisted in browser localStorage.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+**Evolution Note**: Originally specified as "single HTML file with vanilla JavaScript" but amended to accept modern web frameworks that produce static, offline-capable applications. This evolution maintains the spirit of simplicity and self-containment while enabling better developer experience, responsive design, and animation capabilities.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### II. Component-Based Architecture with JavaScript
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+Implementation using modern JavaScript frameworks (React 18+) and component-based architecture for code organization, reusability, and maintainability. No server-side rendering or external state management libraries. Game logic remains pure JavaScript; animations use native CSS.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+**Evolution Note**: Originally specified as "vanilla JavaScript" but amended to accept modern frameworks (Next.js, React) that compile to standard JavaScript. All runtime execution is browser-based JavaScript; the "vanilla" principle is preserved in spirit (no unnecessary external dependencies for core game logic).
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### III. Responsive Design
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+The game board adapts responsively to desktop, tablet, and mobile screens. Touch and click interactions both supported. Layout scales from 320px (mobile) to 2560px (ultra-wide desktop) with CSS Grid and responsive utilities (clamp()).
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### IV. Game State Logic
+
+Game state is managed in memory with persistence to browser localStorage. Players alternate turns (X/O), wins are detected, draws are detected, and game resets are available. State survives browser refresh and page reload (offline capability).
+
+### V. User-Friendly Interface
+
+Clear visual feedback for moves, turn indicator, winner announcement, and an obvious reset button. Pixel-art aesthetic with modern sleek design. Smooth animations (60fps, 200-300ms transitions) enhance user experience without blocking interaction.
+
+## Technical Requirements
+
+- Delivered as static HTML/CSS/JS artifacts via static site export (next export)
+- Built with Next.js 14+ and React 18+ for component architecture
+- CSS Modules for styling; CSS animations for smooth transitions
+- localStorage for offline state persistence (no backend database)
+- Responsive layout using CSS Grid and Flexbox with clamp() for scaling
+- No external API calls; completely self-contained
+
+## Implementation Approach
+
+**Technology Stack**:
+
+- Framework: Next.js 14+ with TypeScript
+- UI Library: React 18+ with component structure
+- Styling: CSS Modules + CSS Animations
+- State Management: React hooks + localStorage
+- Testing: Jest + React Testing Library
+
+**Deployment**:
+
+- Run `next export` to generate static HTML/CSS/JS
+- Deploy `out/` folder to static hosting (Vercel, GitHub Pages, Netlify, etc.)
+- No server required; works on any static host
+
+**Development Workflow**:
+
+- Component-driven development with hot reload
+- Test gameplay via `npm run dev` during development
+- Verify functionality across modern browsers (Chrome, Firefox, Safari, Edge)
+- Keep code clean with TypeScript, ESLint, and Prettier
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution represents the specification for the Tic-Tac-Toe web application. All implementation decisions must align with the core principles: static/offline-capable deployment, responsive design, clear user experience, and component-based JavaScript architecture.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Amendment History**:
+
+**v1.0.0** (2026-01-29): Initial constitution
+
+- Principle I: Single HTML file + Vanilla JavaScript
+- Principle II: No external frameworks
+
+**v2.0.0** (2026-01-29): Framework Amendment
+
+- **Rationale**: User requirement for Next.js/React enables better responsive design, animation capabilities, and developer experience while maintaining static export and offline capability
+- **Decision**: APPROVED - Constitution evolved to accept modern web frameworks that produce static, offline-capable applications
+- Principle I updated: Static, offline-capable deployment (framework-agnostic)
+- Principle II updated: Component-based architecture with modern JavaScript (React 18+)
+- Maintains spirit of simplicity and self-containment while enabling professional development practices
+
+---
+
+**Version**: 2.0.0 | **Ratified**: 2026-01-29 | **Last Amended**: 2026-01-29 (Framework Amendment)

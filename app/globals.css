@@ -1,0 +1,226 @@
+/* Color Palette - CSS Variables */
+:root {
+  /* Primary Colors */
+  --color-bg: #0a0e27;
+  --color-grid: #1a1f3a;
+  --color-cell-bg: #141829;
+  --color-cell-hover: #1f2538;
+
+  /* Player Colors */
+  --color-x: #ff3333;
+  --color-o: #00d9ff;
+  --color-accent: #ffd700;
+
+  /* Text Colors */
+  --color-text: #ffffff;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+
+  /* Button Colors */
+  --color-button-bg: #ff3333;
+  --color-button-hover: #ff5050;
+  --color-button-border: #ff3333;
+  --color-button-text: #ffffff;
+
+  /* Spacing */
+  --spacing-unit: 1rem;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1 {
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+/* Responsive Design Breakpoints */
+
+/* Desktop - 1025px and above */
+@media (min-width: 1025px) {
+  :root {
+    --spacing-unit: 1rem;
+  }
+}
+
+/* Tablet - 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --spacing-unit: 0.875rem;
+  }
+}
+
+/* Mobile - 320px to 767px */
+@media (max-width: 767px) {
+  :root {
+    --spacing-unit: 0.75rem;
+  }
+}
+
+/* Extra small mobile - 320px to 374px */
+@media (max-width: 374px) {
+  :root {
+    --spacing-unit: 0.625rem;
+  }
+}
+
+/* Landscape adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  body {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+}
+
+/* High DPI screens */
+@media (min-device-pixel-ratio: 2) {
+  body {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1920px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 2560px) {
+  body {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a1a1a;
+    --color-grid: #2d2d2d;
+    --color-cell-bg: #222;
+    --color-cell-hover: #333;
+  }
+}
